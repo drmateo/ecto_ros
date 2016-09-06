@@ -1,8 +1,11 @@
+#find_package(PkgConfig)
+#pkg_check_modules(PC_EIGEN Eigen3)
+
 find_package(OpenCV REQUIRED)
-find_package(Eigen REQUIRED)
+find_package(Eigen3 REQUIRED)
 
 include_directories(${catkin_INCLUDE_DIRS}
-                    ${Eigen_INCLUDE_DIRS}
+                    ${EIGEN3_INCLUDE_DIRS}
 )
 
 ectomodule(ecto_ros_main DESTINATION ecto_ros INSTALL
